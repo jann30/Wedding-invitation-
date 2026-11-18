@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>M. Gunasekar M.Pharm. & S. Nithyapriya B.E. - Wedding Invitation</title>
+    
+    <!-- Open Graph / WhatsApp Sharing Meta Tags -->
+    <meta property="og:title" content="Wedding Invitation: M. Gunasekar & S. Nithyapriya">
+    <meta property="og:description" content="You are cordially invited to our wedding ceremony on Sunday, 13th December 2026 at Notebook Hall, Teppakulam, Madurai.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0A1C2A/D4AF37?text=Gunasekar+%26+Nithyapriya+Wedding">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Canvas Confetti for Petal Pop Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        twilightDark: '#040B10',
+                        twilightMid: '#0A1C2A',
+                        twilightLight: '#132D3F',
+                        royalGold: '#D4AF37',
+                        lightGold: '#F9E4B7',
+                        deepGold: '#AA771C',
+                        textLight: '#FBFDFB',
+                        textMuted: '#B0C4DE',
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        cinzel: ['"Cinzel"', 'serif'],
+                        montserrat: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #04090E;
+            color: #FBFDFB;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Opulent Twilight Sapphire-Teal Background Gradient */
+        .twilight-bg {
+            background: linear-gradient(135deg, #061118 0%, #0A1C2A 50%, #132D3F 100%);
+        }
+
+        /* Glittering Metallic Royal Gold Gradient Text */
+        .gold-glitter-text {
+            background: linear-gradient(135deg, #F9E4B7 0%, #FFEFC0 25%, #D4AF37 50%, #C5A028 75%, #AA771C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.5));
+        }
+
+        @keyframes goldShimmer {
+            0% { filter: drop-shadow(0 0 3px rgba(212,175,55,0.4)); }
+            50% { filter: drop-shadow(0 0 16px rgba(212,175,55,0.95)); }
+            100% { filter: drop-shadow(0 0 3px rgba(212,175,55,0.4)); }
+        }
+
+        .twinkle-gold {
+            animation: goldShimmer 2.5s ease-in-out infinite;
+        }
+
+        .gold-border-glow {
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(212, 175, 55, 0.08);
+        }
+
+        .sapphire-card {
+            background: rgba(10, 28, 42, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+        }
+
+        /* Qualification Badge on Single Line */
+        .qualification {
+            font-size: 0.58em;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            color: #F9E4B7;
+            background: rgba(212, 175, 55, 0.22);
+            border: 1px solid rgba(212, 175, 55, 0.6);
+            padding: 3px 9px;
+            border-radius: 9999px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+            text-transform: uppercase;
+        }
+
+        .ambient-glow {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, rgba(6, 17, 24, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Delicate Floral Corner Watermarks */
+        .floral-corner-tl {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
+            opacity: 0.5;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23D4AF37' stroke-width='2'%3E%3Cpath d='M10 90 Q10 10 90 10 M10 70 Q30 70 30 50 M50 30 Q70 30 70 10 M25 25 C40 25 25 40 40 40'/%3E%3Ccircle cx='30' cy='30' r='5' fill='%23D4AF37'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+        }
+
+        .floral-corner-tr {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 60px;
+            height: 60px;
+            opacity: 0.5;
+            pointer-events: none;
+            transform: scaleX(-1);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23D4AF37' stroke-width='2'%3E%3Cpath d='M10 90 Q10 10 90 10 M10 70 Q30 70 30 50 M50 30 Q70 30 70 10 M25 25 C40 25 25 40 40 40'/%3E%3Ccircle cx='30' cy='30' r='5' fill='%23D4AF37'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+        }
+
+        #opening-cover {
+            transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 1s ease-in-out;
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #061118; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 2px; }
+    </style>
+</head>
+<body class="selection:bg-[#D4AF37] selection:text-black">
+
+    <!-- FLOATING CONTROLS -->
+    <div id="floating-controls" class="fixed top-4 right-4 z-50 flex items-center gap-3 transition-opacity duration-700 opacity-0 pointer-events-none">
+        <button id="music-toggle" onclick="toggleMusic()" class="sapphire-card text-royalGold p-3 rounded-full shadow-lg hover:bg-royalGold hover:text-black transition-all flex items-center justify-center w-11 h-11" title="Toggle Ambient Melody">
+            <i id="music-icon" class="fa-solid fa-music text-sm"></i>
+        </button>
+        <button onclick="openEditModal()" class="sapphire-card text-royalGold p-3 rounded-full shadow-lg hover:bg-royalGold hover:text-black transition-all flex items-center justify-center w-11 h-11" title="Edit Details">
+            <i class="fa-solid fa-sliders text-sm"></i>
+        </button>
+    </div>
+
+    <!-- OPENING INVITATION COVER -->
+    <div id="opening-cover" class="fixed inset-0 z-50 twilight-bg flex flex-col items-center justify-between p-6 text-center overflow-y-auto">
+        <div class="floral-corner-tl"></div>
+        <div class="floral-corner-tr"></div>
+        <div class="ambient-glow top-10 left-1/2 -translate-x-1/2"></div>
+
+        <div class="w-full max-w-md pt-6 flex flex-col items-center relative z-10">
+            <div class="text-royalGold text-xs tracking-[0.4em] uppercase font-cinzel font-semibold">
+                Wedding Invitation
+            </div>
+            <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-royalGold to-transparent mx-auto mt-3"></div>
+        </div>
+
+        <div class="my-auto py-8 flex flex-col items-center max-w-sm w-full relative z-10">
+            <!-- Monogram Logo & Interlocking Rings -->
+            <div class="relative w-36 h-36 rounded-full sapphire-card border-2 border-royalGold flex items-center justify-center mb-6 shadow-[0_15px_45px_rgba(212,175,55,0.35)] twinkle-gold">
+                <div class="absolute inset-2 rounded-full border border-dashed border-royalGold/60 animate-spin" style="animation-duration: 45s;"></div>
+                <div class="relative flex flex-col items-center justify-center">
+                    <span class="font-cinzel text-3xl font-black gold-glitter-text tracking-wider">G &amp; N</span>
+                    <div class="flex items-center gap-1.5 mt-1 text-royalGold text-xs">
+                        <i class="fa-solid fa-ring"></i>
+                        <i class="fa-solid fa-ring -ml-1.5 opacity-80"></i>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="font-cinzel text-2xl md:text-3xl gold-glitter-text font-bold mb-3 tracking-wider uppercase">Gunasekar &amp; Nithyapriya</h1>
+            <p class="font-montserrat text-xs text-textMuted mb-8 max-w-xs leading-relaxed">
+                You are cordially invited to celebrate our wedding ceremony on Sunday, 13th December 2026.
+            </p>
+
+            <button onclick="openInvitation()" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#F9E4B7] via-[#D4AF37] to-[#AA771C] text-black font-bold rounded-full shadow-[0_10px_35px_rgba(212,175,55,0.5)] hover:scale-105 transition-all duration-300 font-montserrat tracking-widest uppercase text-xs">
+                <i class="fa-solid fa-envelope-open text-sm group-hover:rotate-12 transition-transform"></i>
+                <span>Tap to Open Invitation</span>
+                <div class="absolute inset-0 rounded-full border-2 border-white/50 animate-ping opacity-30"></div>
+            </button>
+        </div>
+
+        <div class="w-full pb-4 text-[10px] text-textMuted tracking-[0.3em] uppercase font-montserrat relative z-10">
+            December 2026 • Tamil Nadu
+        </div>
+    </div>
+
+    <!-- MAIN IMMERSIVE INVITATION CONTAINER -->
+    <div id="main-content" class="min-h-screen twilight-bg relative max-w-md mx-auto shadow-[0_0_70px_rgba(0,0,0,0.9)] border-x border-royalGold/30 opacity-0 transition-opacity duration-1000">
+        <div class="floral-corner-tl"></div>
+        <div class="floral-corner-tr"></div>
+        
+        <!-- TOP HEADER -->
+        <div class="relative bg-gradient-to-b from-[#061118] via-twilightMid to-twilightMid pt-10 pb-6 px-4 text-center border-b border-royalGold/30 overflow-hidden">
+            <div class="ambient-glow -top-10 left-1/2 -translate-x-1/2"></div>
+            
+            <div class="relative z-10">
+                <div class="w-14 h-14 mx-auto mb-3 rounded-full sapphire-card border border-royalGold flex items-center justify-center text-royalGold shadow-md twinkle-gold">
+                    <span class="font-cinzel text-lg font-bold gold-glitter-text">G&amp;N</span>
+                </div>
+
+                <h2 id="display-title" class="font-cinzel text-2xl md:text-3xl gold-glitter-text tracking-widest uppercase font-bold mt-2">Wedding Invitation</h2>
+                <div class="w-28 h-[1px] bg-gradient-to-r from-transparent via-royalGold to-transparent mx-auto my-3"></div>
+                
+                <p id="display-message" class="font-playfair italic text-xs md:text-sm text-textMuted px-6 leading-relaxed">
+                    "Solicit your honourable presence to grace the joyous occasion of our wedding ceremony."
+                </p>
+            </div>
+        </div>
+
+        <!-- COUPLE NAME SECTION (Single Line with Qualifications) -->
+        <div class="py-10 px-6 text-center relative twilight-bg my-1 overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+            
+            <div class="relative z-10 space-y-6">
+                <!-- Groom Box -->
+                <div class="p-6 rounded-2xl sapphire-card gold-border-glow shadow-md">
+                    <div class="font-montserrat text-[10px] tracking-[0.3em] text-royalGold uppercase mb-1 font-semibold">Groom</div>
+                    <h3 id="display-groom" class="font-cinzel text-xl md:text-2xl text-textLight font-bold leading-relaxed">
+                        M. Gunasekar<span id="display-groom-qual" class="qualification">M.Pharm.</span>
+                    </h3>
+                </div>
+
+                <div class="text-royalGold text-lg font-cinzel my-1 font-bold twinkle-gold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-ring text-xs opacity-75"></i>
+                    <span>~ &amp; ~</span>
+                    <i class="fa-solid fa-ring text-xs opacity-75"></i>
+                </div>
+
+                <!-- Bride Box -->
+                <div class="p-6 rounded-2xl sapphire-card gold-border-glow shadow-md">
+                    <div class="font-montserrat text-[10px] tracking-[0.3em] text-royalGold uppercase mb-1 font-semibold">Bride</div>
+                    <h3 id="display-bride" class="font-cinzel text-xl md:text-2xl text-textLight font-bold leading-relaxed">
+                        S. Nithyapriya<span id="display-bride-qual" class="qualification">B.E.</span>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-col items-center justify-center opacity-80 animate-bounce relative z-10">
+                <span class="text-[10px] text-royalGold tracking-widest uppercase font-montserrat mb-1 font-semibold">Scratch &amp; Reveal Date</span>
+                <i class="fa-solid fa-chevron-down text-royalGold text-xs"></i>
+            </div>
+        </div>
+
+        <!-- SCRATCH-TO-REVEAL DATE SECTION -->
+        <div class="py-9 px-6 text-center bg-gradient-to-b from-twilightMid to-[#061118] border-y border-royalGold/30 relative">
+            <h3 class="font-cinzel text-base gold-glitter-text font-bold mb-1 tracking-wider uppercase">Scratch to Reveal Date</h3>
+            <p class="text-[11px] text-textMuted mb-5 font-montserrat">Swipe or scratch the gold foil to reveal the auspicious date</p>
+
+            <div class="relative w-full max-w-xs mx-auto h-36 rounded-2xl overflow-hidden border-2 border-royalGold shadow-[0_10px_30px_rgba(212,175,55,0.25)] bg-twilightLight flex items-center justify-center">
+                <div id="scratch-content" class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center z-0 bg-[#0A1C2A]">
+                    <div class="text-textLight font-playfair font-bold text-sm md:text-base mb-1" id="display-wedding-date">Sunday, 13th December 2026</div>
+                    <div class="text-textMuted text-xs font-montserrat mb-1" id="display-wedding-time">10.05 AM to 11.25 AM</div>
+                    <div class="text-royalGold text-[11px] font-semibold tracking-wider uppercase mt-1">Notebook Hall, Teppakulam, Madurai</div>
+                </div>
+
+                <canvas id="scratch-canvas" class="absolute inset-0 z-10 cursor-pointer touch-none w-full h-full"></canvas>
+            </div>
+            
+            <button onclick="resetScratch()" class="mt-3 text-[11px] text-royalGold underline hover:text-lightGold transition-colors font-montserrat font-medium">
+                Reset Scratch Foil
+            </button>
+        </div>
+
+        <!-- LIVE COUNTDOWN TIMER -->
+        <div class="py-9 px-6 text-center bg-twilightMid">
+            <h3 class="font-cinzel text-base gold-glitter-text font-bold mb-5 tracking-wider uppercase">Countdown to Muhurtham</h3>
+            
+            <div class="grid grid-cols-4 gap-2.5 max-w-xs mx-auto">
+                <div class="sapphire-card rounded-xl p-2.5 gold-border-glow shadow-sm">
+                    <div id="days" class="font-playfair text-2xl font-bold text-textLight">00</div>
+                    <div class="text-[9px] uppercase tracking-wider text-textMuted font-montserrat mt-1">Days</div>
+                </div>
+                <div class="sapphire-card rounded-xl p-2.5 gold-border-glow shadow-sm">
+                    <div id="hours" class="font-playfair text-2xl font-bold text-textLight">00</div>
+                    <div class="text-[9px] uppercase tracking-wider text-textMuted font-montserrat mt-1">Hours</div>
+                </div>
+                <div class="sapphire-card rounded-xl p-2.5 gold-border-glow shadow-sm">
+                    <div id="minutes" class="font-playfair text-2xl font-bold text-textLight">00</div>
+                    <div class="text-[9px] uppercase tracking-wider text-textMuted font-montserrat mt-1">Mins</div>
+                </div>
+                <div class="sapphire-card rounded-xl p-2.5 gold-border-glow shadow-sm">
+                    <div id="seconds" class="font-playfair text-2xl font-bold text-textLight">00</div>
+                    <div class="text-[9px] uppercase tracking-wider text-textMuted font-montserrat mt-1">Secs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EVENT SCHEDULE TIMELINE -->
+        <div class="py-10 px-6 bg-gradient-to-b from-twilightMid to-twilightDark border-t border-royalGold/30">
+            <h3 class="font-cinzel text-lg gold-glitter-text font-bold text-center mb-8 tracking-wider uppercase">Ceremony Schedule</h3>
+
+            <div class="space-y-5 max-w-sm mx-auto font-montserrat">
+                <!-- Betrothal Event -->
+                <div class="relative pl-6 border-l-2 border-royalGold">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-royalGold border-4 border-twilightMid shadow-[0_0_12px_#D4AF37]"></div>
+                    <div class="sapphire-card rounded-xl p-4 gold-border-glow shadow-sm">
+                        <span class="text-[10px] font-semibold uppercase tracking-widest text-royalGold">Pre-Wedding Ceremony</span>
+                        <h4 class="font-playfair text-base font-bold text-textLight mt-0.5">Betrothal</h4>
+                        <p id="display-betrothal-date" class="text-xs text-textMuted mt-1.5"><i class="fa-regular fa-calendar-days mr-1.5 text-royalGold"></i> 12th December 2026, Saturday</p>
+                        <p id="display-betrothal-time" class="text-xs text-textMuted mt-1"><i class="fa-regular fa-clock mr-1.5 text-royalGold"></i> 6.30 PM onwards</p>
+                    </div>
+                </div>
+
+                <!-- Wedding Ceremony Event -->
+                <div class="relative pl-6 border-l-2 border-royalGold">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-royalGold border-4 border-twilightMid shadow-[0_0_12px_#D4AF37]"></div>
+                    <div class="sapphire-card rounded-xl p-4 gold-border-glow shadow-sm">
+                        <span class="text-[10px] font-semibold uppercase tracking-widest text-royalGold">Auspicious Muhurtham</span>
+                        <h4 class="font-playfair text-base font-bold text-textLight mt-0.5">Wedding Ceremony</h4>
+                        <p id="display-main-date" class="text-xs text-textMuted mt-1.5"><i class="fa-regular fa-calendar-days mr-1.5 text-royalGold"></i> Sunday, 13th December 2026</p>
+                        <p id="display-main-time" class="text-xs text-textMuted mt-1"><i class="fa-regular fa-clock mr-1.5 text-royalGold"></i> 10.05 AM to 11.25 AM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VENUE & MAP LOCATION SECTION -->
+        <div class="py-10 px-6 twilight-bg text-center border-t border-royalGold/30 relative">
+            <div class="ambient-glow bottom-0 left-1/2 -translate-x-1/2"></div>
+
+            <div class="relative z-10">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full sapphire-card border border-royalGold flex items-center justify-center text-royalGold text-lg shadow-sm twinkle-gold">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                
+                <h3 class="font-cinzel text-lg gold-glitter-text font-bold mb-2 tracking-wider uppercase">Wedding Venue</h3>
+                <p id="display-venue-name" class="font-playfair text-base text-textLight font-semibold mb-1">Notebook Hall, Teppakulam, Madurai</p>
+                <p id="display-venue-address" class="text-xs text-textMuted font-montserrat mb-6 max-w-xs mx-auto">Teppakulam, Madurai, Tamil Nadu, India</p>
+
+                <a id="display-map-link" href="https://maps.google.com/?q=Notebook+Hall+Teppakulam+Madurai" target="_blank" class="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#F9E4B7] via-[#D4AF37] to-[#AA771C] text-black font-bold rounded-full shadow-[0_10px_35px_rgba(212,175,55,0.5)] hover:scale-105 transition-all text-xs font-montserrat uppercase tracking-wider">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Open Google Maps Location</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- WISHES & BLESSINGS WALL SECTION -->
+        <div class="py-9 px-6 bg-gradient-to-b from-twilightDark to-twilightMid border-t border-royalGold/30">
+            <h3 class="font-cinzel text-base gold-glitter-text font-bold text-center mb-1 tracking-wider uppercase">Blessings &amp; Wishes</h3>
+            <p class="text-[11px] text-textMuted text-center mb-5 font-montserrat">Leave your heartfelt wishes for the couple</p>
+
+            <div class="space-y-3 max-w-sm mx-auto font-montserrat text-xs">
+                <input type="text" id="wish-name" placeholder="Your Name" class="w-full sapphire-card border border-royalGold/40 rounded-xl p-3 text-textLight placeholder:text-textMuted/60 focus:outline-none focus:border-royalGold shadow-sm">
+                <textarea id="wish-message" rows="2" placeholder="Your warm wishes..." class="w-full sapphire-card border border-royalGold/40 rounded-xl p-3 text-textLight placeholder:text-textMuted/60 focus:outline-none focus:border-royalGold shadow-sm"></textarea>
+                <button onclick="submitWish()" class="w-full py-3 bg-gradient-to-r from-[#F9E4B7] via-[#D4AF37] to-[#AA771C] text-black font-bold rounded-xl shadow uppercase tracking-wider">
+                    Send Blessing
+                </button>
+            </div>
+            <div id="wishes-list" class="mt-4 space-y-2.5 max-w-sm mx-auto text-xs font-montserrat">
+                <div class="p-3 rounded-xl sapphire-card border border-royalGold/20 text-textMuted shadow-sm">
+                    <span class="font-bold text-royalGold">Karthik R:</span> Heartiest congratulations to Gunasekar &amp; Nithyapriya! Wishing you an extraordinary life together.
+                </div>
+            </div>
+        </div>
+
+        <!-- WHATSAPP SHARING & FOOTER -->
+        <div class="py-9 px-6 text-center bg-twilightMid border-t border-royalGold/30">
+            <h4 class="font-cinzel text-xs gold-glitter-text font-semibold mb-2 uppercase tracking-wider">Share the Celebration</h4>
+            <p class="text-[11px] text-textMuted font-montserrat mb-4">Send this wedding invitation via WhatsApp</p>
+            
+            <button onclick="shareOnWhatsApp()" class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-full shadow-lg transition-all text-xs font-montserrat mb-6">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>Share via WhatsApp</span>
+            </button>
+
+            <div class="w-24 h-[1px] bg-royalGold/40 mx-auto mb-4"></div>
+            <p class="text-[11px] text-textMuted font-montserrat leading-relaxed">
+                With best compliments from Family &amp; Friends.<br>
+                <span class="text-textLight font-semibold">M. Gunasekar M.Pharm. &amp; S. Nithyapriya B.E.</span>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- CUSTOMIZATION / EDIT MODAL -->
+    <div id="edit-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="sapphire-card border-2 border-royalGold rounded-2xl max-w-md w-full p-5 text-left shadow-[0_20px_50px_rgba(0,0,0,0.85)] max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 border-b border-royalGold/30 pb-2">
+                <h3 class="font-cinzel text-base gold-glitter-text font-bold uppercase">Edit Invitation Details</h3>
+                <button onclick="closeEditModal()" class="text-textLight hover:text-royalGold text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="space-y-3 font-montserrat text-xs">
+                <div>
+                    <label class="block text-textLight font-medium mb-1">Groom Name</label>
+                    <input type="text" id="input-groom" class="w-full bg-[#061118] border border-royalGold/40 rounded-xl p-2.5 text-textLight focus:outline-none" value="M. Gunasekar">
+                </div>
+                <div>
+                    <label class="block text-textLight font-medium mb-1">Groom Qualification</label>
+                    <input type="text" id="input-groom-qual" class="w-full bg-[#061118] border border-royalGold/40 rounded-xl p-2.5 text-textLight focus:outline-none" value="M.Pharm.">
+                </div>
+                <div>
+                    <label class="block text-textLight font-medium mb-1">Bride Name</label>
+                    <input type="text" id="input-bride" class="w-full bg-[#061118] border border-royalGold/40 rounded-xl p-2.5 text-textLight focus:outline-none" value="S. Nithyapriya">
+                </div>
+                <div>
+                    <label class="block text-textLight font-medium mb-1">Bride Qualification</label>
+                    <input type="text" id="input-bride-qual" class="w-full bg-[#061118] border border-royalGold/40 rounded-xl p-2.5 text-textLight focus:outline-none" value="B.E.">
+                </div>
+                <div>
+                    <label class="block text-textLight font-medium mb-1">Wedding Date String</label>
+                    <input type="text" id="input-date" class="w-full bg-[#061118] border border-royalGold/40 rounded-xl p-2.5 text-textLight focus:outline-none" value="Sunday, 13th December 2026">
+                </div>
+                <div>
+                    <label class="block text-textLight font-medium mb-1">Wedding Time</label>
+                    <input type="text" id="input-time" class="w-full bg-[#061118] border border-royalGold/40 rounded-xl p-2.5 text-textLight focus:outline-none" value="10.05 AM to 11.25 AM">
+                </div>
+                <div>
+                    <label class="block text-textLight font-medium mb-1">Venue Name</label>
+                    <input type="text" id="input-venue" class="w-full bg-[#061118] border border-royalGold/40 rounded-xl p-2.5 text-textLight focus:outline-none" value="Notebook Hall, Teppakulam, Madurai">
+                </div>
+                <div>
+                    <label class="block text-textLight font-medium mb-1">Google Maps Link</label>
+                    <input type="text" id="input-map" class="w-full bg-[#061118] border border-royalGold/40 rounded-xl p-2.5 text-textLight focus:outline-none" value="https://maps.google.com/?q=Notebook+Hall+Teppakulam+Madurai">
+                </div>
+
+                <button onclick="saveDetails()" class="w-full py-3 bg-gradient-to-r from-[#F9E4B7] via-[#D4AF37] to-[#AA771C] text-black font-bold rounded-xl shadow uppercase tracking-wider mt-4">
+                    Save &amp; Update
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        // Web Audio API Ambient Generative Melody (Harp / Flute style)
+        let audioCtx = null;
+        let isPlaying = false;
+        let melodyInterval = null;
+
+        // Carnatic/Classical pentatonic frequencies (approximate notes in Hz)
+        // Sa, Ri, Ga, Pa, Dha (C pentatonic scale octave)
+        const notes = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 659.25, 783.99, 880.00];
+
+        function playNote() {
+            if (!isPlaying || !audioCtx) return;
+            const freq = notes[Math.floor(Math.random() * notes.length)];
+            
+            const osc = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+
+            osc.type = Math.random() > 0.5 ? 'sine' : 'triangle';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+            // Soft envelope for harp-like plucked feel
+            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 0.08);
+            gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 2.5);
+
+            osc.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + 2.6);
+        }
+
+        function toggleMusic() {
+            const musicIcon = document.getElementById('music-icon');
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+
+            if (isPlaying) {
+                isPlaying = false;
+                if (melodyInterval) clearInterval(melodyInterval);
+                musicIcon.classList.remove('fa-spin');
+            } else {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                isPlaying = true;
+                playNote();
+                melodyInterval = setInterval(playNote, 1200);
+                musicIcon.classList.add('fa-spin');
+            }
+        }
+
+        // Open Invitation Cover
+        function openInvitation() {
+            const cover = document.getElementById('opening-cover');
+            const mainContent = document.getElementById('main-content');
+            const floatingControls = document.getElementById('floating-controls');
+
+            cover.style.transform = 'translateY(-100%)';
+            cover.style.opacity = '0';
+            setTimeout(() => {
+                cover.style.display = 'none';
+                mainContent.style.opacity = '1';
+                floatingControls.style.opacity = '1';
+                floatingControls.style.pointerEvents = 'auto';
+            }, 1000);
+
+            // Start ambient music automatically on open
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (!isPlaying) {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                isPlaying = true;
+                playNote();
+                melodyInterval = setInterval(playNote, 1200);
+                document.getElementById('music-icon').classList.add('fa-spin');
+            }
+
+            triggerPetalPop();
+        }
+
+        // Petal Pop Confetti Effect
+        function triggerPetalPop() {
+            confetti({
+                particleCount: 125,
+                spread: 110,
+                origin: { y: 0.6 },
+                colors: ['#D4AF37', '#F9E4B7', '#AA771C', '#3B82F6', '#1E3A8A'],
+                shapes: ['circle', 'square']
+            });
+        }
+
+        // Scratch Card Implementation
+        const canvas = document.getElementById('scratch-canvas');
+        const ctx = canvas.getContext('2d');
+        let isScratching = false;
+        let revealed = false;
+
+        function initScratchCard() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#F9E4B7');
+            gradient.addColorStop(0.5, '#D4AF37');
+            gradient.addColorStop(1, '#AA771C');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = 'bold 13px Montserrat, sans-serif';
+            ctx.fillStyle = '#061118';
+            ctx.textAlign = 'center';
+            ctx.fillText('✨ Scratch Here to Reveal ✨', canvas.width / 2, canvas.height / 2 + 4);
+        }
+
+        window.addEventListener('load', initScratchCard);
+        window.addEventListener('resize', () => { if(!revealed) initScratchCard(); });
+
+        function scratch(e) {
+            if (!isScratching) return;
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+            const x = clientX - rect.left;
+            const y = clientY - rect.top;
+
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.beginPath();
+            ctx.arc(x, y, 22, 0, Math.PI * 2, false);
+            ctx.fill();
+
+            checkRevealPercentage();
+        }
+
+        function checkRevealPercentage() {
+            if (revealed) return;
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            let transparentPixels = 0;
+            const totalPixels = imageData.data.length / 4;
+
+            for (let i = 3; i < imageData.data.length; i += 4) {
+                if (imageData.data[i] < 128) transparentPixels++;
+            }
+
+            if (transparentPixels / totalPixels > 0.38) {
+                revealed = true;
+                canvas.style.transition = 'opacity 0.8s ease';
+                canvas.style.opacity = '0';
+                setTimeout(() => { canvas.style.display = 'none'; }, 800);
+                triggerPetalPop();
+            }
+        }
+
+        canvas.addEventListener('mousedown', () => { isScratching = true; });
+        canvas.addEventListener('mousemove', scratch);
+        window.addEventListener('mouseup', () => { isScratching = false; });
+
+        canvas.addEventListener('touchstart', (e) => { isScratching = true; scratch(e); });
+        canvas.addEventListener('touchmove', (e) => { scratch(e); e.preventDefault(); });
+        window.addEventListener('touchend', () => { isScratching = false; });
+
+        function resetScratch() {
+            revealed = false;
+            canvas.style.display = 'block';
+            canvas.style.opacity = '1';
+            initScratchCard();
+        }
+
+        // Live Countdown Timer (Target: 13th Dec 2026, 10:05 AM)
+        const weddingDate = new Date('2026-12-13T10:05:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById('days').innerText = '00';
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                document.getElementById('seconds').innerText = '00';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Wishes Wall Submission
+        function submitWish() {
+            const name = document.getElementById('wish-name').value.trim();
+            const msg = document.getElementById('wish-message').value.trim();
+            if(!name || !msg) return;
+
+            const list = document.getElementById('wishes-list');
+            const newWish = document.createElement('div');
+            newWish.className = 'p-3 rounded-xl sapphire-card border border-royalGold/20 text-textMuted shadow-sm';
+            newWish.innerHTML = `<span class="font-bold text-royalGold">${escapeHtml(name)}:</span> ${escapeHtml(msg)}`;
+            list.prepend(newWish);
+
+            document.getElementById('wish-name').value = '';
+            document.getElementById('wish-message').value = '';
+        }
+
+        function escapeHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        // Modal Controls
+        function openEditModal() { document.getElementById('edit-modal').classList.remove('hidden'); }
+        function closeEditModal() { document.getElementById('edit-modal').classList.add('hidden'); }
+
+        function saveDetails() {
+            const groom = document.getElementById('input-groom').value;
+            const groomQual = document.getElementById('input-groom-qual').value;
+            const bride = document.getElementById('input-bride').value;
+            const brideQual = document.getElementById('input-bride-qual').value;
+            const dateStr = document.getElementById('input-date').value;
+            const timeStr = document.getElementById('input-time').value;
+            const venueStr = document.getElementById('input-venue').value;
+            const mapLink = document.getElementById('input-map').value;
+
+            document.getElementById('display-groom').innerHTML = `${groom}<span class="qualification">${groomQual}</span>`;
+            document.getElementById('display-bride').innerHTML = `${bride}<span class="qualification">${brideQual}</span>`;
+            document.getElementById('display-wedding-date').innerText = dateStr;
+            document.getElementById('display-wedding-time').innerText = timeStr;
+            document.getElementById('display-main-date').innerText = dateStr;
+            document.getElementById('display-main-time').innerText = timeStr;
+            document.getElementById('display-venue-name').innerText = venueStr;
+            document.getElementById('display-map-link').href = mapLink;
+
+            closeEditModal();
+        }
+
+        // WhatsApp Share
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent("You're cordially invited to the Wedding Ceremony of M. Gunasekar M.Pharm. & S. Nithyapriya B.E. on Sunday, 13th December 2026 at Notebook Hall, Teppakulam, Madurai. View the wedding invitation: " + window.location.href);
+            window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+        }
+    </script>
+</body>
+</html>
